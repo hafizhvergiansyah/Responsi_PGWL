@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('index') }}"><i class="fa-solid fa-house"></i>Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('landing') }}"><i class="fa-solid fa-house"></i>Home</a>
                     </li>
 
                     <li class="nav-item dropdown">

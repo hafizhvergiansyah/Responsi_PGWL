@@ -21,6 +21,8 @@ use App\Http\Controllers\DasboardController;
 
 Route::get('/', [MapController::class, 'index'])->name('index');
 Route::get('/table', [MapController::class, 'table'])->name('table');
+Route::get('/landing', [MapController::class, 'landing'])->name('landing');
+
 //create point
 Route::post('/store-point', [PointController::class, 'store'])->name('store-point');
 //create polyline

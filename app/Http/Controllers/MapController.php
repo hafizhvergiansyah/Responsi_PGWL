@@ -25,4 +25,11 @@ class MapController extends Controller
         ];
         return view('table', $data);
     }
+    public function landing()
+    {
+        $data = [
+            "title" => "Landing"
+        ];
+        return view('landing', $data);
+    }
 }
