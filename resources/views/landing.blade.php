@@ -227,38 +227,14 @@
         <div class="overlay"></div>
         <div class="container content">
             <h2>Explore Bantul</h2>
-            <p>Bantul is a regency located in the southern part of the Yogyakarta Special Region in Indonesia. It's known for its beautiful beaches, cultural heritage, and friendly locals.</p>
+            <p>Bantul is a regency located in the southern part of the Yogyakarta Special Region in Indonesia. It's known for its beautiful beaches, cultural heritage, and friendly locals.
+                Discover the natural beauty of Bantul through our dedicated platform, Bantul Bercerita. Located in the heart of the Yogyakarta Special Region, Bantul is renowned for its breathtaking landscapes, stunning beaches, lush forests, and vibrant cultural heritage. Whether you are a seasoned traveler or a first-time visitor, our website offers a comprehensive guide to exploring Bantul’s natural wonders.
+            </p>
             <div class="button-container">
                 <a href="{{ route('index') }}" class="btn btn-primary">Discover More</a>
             </div>
         </div>
     </section>
-
-    <section id="attractions" class="section attraction">
-        <div class="container">
-            <h2>Top Attractions</h2>
-            <p>Experience the most popular attractions in Bantul.</p>
-            <img src="image/hutanpinus.jpg" alt="Hutan Pinus">
-            <img src="image/jurangtembelan.jpg" alt="Jurang Tembelan">
-            <img src="image/gumukpasir.jpg" alt="Gunuk Pasir">
-            <img src="image/kebunbuahmangunan.jpg" alt="Kebun Buah Mangunan">
-            <img src="image/puncakbecici.jpg" alt="Puncak Becici">
-        </div>
-    </section>
-
-    <section id="gallery" class="section gallery">
-        <div class="container">
-            <h2>Gallery</h2>
-            <p>Check out our gallery of beautiful sights in Bantul.</p>
-            <img src="image/hutanpinus.jpg" alt="Hutan Pinus">
-            <img src="image/jurangtembelan.jpg" alt="Jurang Tembelan">
-            <img src="image/gumukpasir.jpg" alt="Gunuk Pasir">
-            <img src="image/kebunbuahmangunan.jpg" alt="Kebun Buah Mangunan">
-            <img src="image/puncakbecici.jpg" alt="Puncak Becici">
-        </div>
-    </section>
-
-   
 
     <section id="welcome-section" class="section">
         <div class="container">
@@ -267,7 +243,13 @@
                     <div class="p-5">
                         <h2 class="display-4">Vacation to Avoid Stress!!!</h2>
                         <p>
-                            Welcome to Bantul Regency, a hidden paradise in the Yogyakarta Province of Indonesia. This regency, rich in natural beauty, makes for an unforgettable tourist destination. With a harmonious blend of cultural wealth and natural charm, Bantul captivates every visitor. Bantul is known for its stunning beaches. One must-visit is Parangtritis Beach, a mesmerizing beach with its long coastline, soft white sand, and challenging waves. Visitors can enjoy breathtaking sunsets or try the thrilling experience of surfing on tempting waves. Other tourist spots can be seen on the tourism distribution map below.
+                            Welcome to Bantul Regency, a hidden paradise in the Yogyakarta Province of Indonesia.
+                            This regency, rich in natural beauty, makes for an unforgettable tourist destination.
+                            With a harmonious blend of cultural wealth and natural charm, Bantul captivates every visitor.
+                            Bantul is known for its stunning beaches. One must-visit is Parangtritis Beach, a mesmerizing beach with its long coastline, soft white sand, and challenging waves.
+                            Visitors can enjoy breathtaking sunsets or try the thrilling experience of surfing on tempting waves.
+                            Other tourist spots can be seen on the tourism distribution map below.
+                            Bantul Bercerita is your gateway to exploring the best natural attractions that Bantul has to offer. From the iconic Parangtritis Beach with its mesmerizing sunsets and thrilling waves to the serene Hutan Pinus (Pine Forest) offering tranquility amidst towering pines, our website covers it all. Each attraction is meticulously documented with high-quality images and detailed descriptions to give you a vivid preview of what awaits.
                         </p>
                         <a class="btn btn-primary btn-xl rounded-pill mt-5" href="{{ route('index') }}">Explore</a>
                     </div>
@@ -280,12 +262,34 @@
             </div>
         </div>
     </section>
+
+
+
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <p>Check out our gallery of beautiful sights in Bantul.</p>
+            <img src="image/hutanpinus.jpg" alt="Hutan Pinus">
+            <img src="image/jurangtembelan.jpg" alt="Jurang Tembelan">
+            <img src="image/gumukpasir.jpg" alt="Gunuk Pasir">
+            <img src="image/kebunbuahmangunan.jpg" alt="Kebun Buah Mangunan">
+            <img src="image/puncakbecici.jpg" alt="Puncak Becici">
+            <img src="image/goacemara.jpg" alt="Goacemara">
+            <img src="image/lagunadepok.jpeg" alt="Laguna Depok">
+            <img src="image/lintang.png" alt="Bukit Lintang">
+            <img src="image/parangkusumo.jpg" alt="Pantai Parangkusumo">
+            <img src="image/parangtritis.jpg" alt="Pantai Parangtritis">
+            <img src="image/pengilon.jpeg" alt="Bukit Pengilon">
+            <img src="image/sosok.jpg" alt="Puncak Sosok">
+
+        </div>
+    </section>
 @endsection
 
 @section('footer')
     <footer>
         <div class="container">
-            <p>&copy; 2024 Bantul Bercerita. All rights reserved.</p>
+            <p>&copy; 2024 Bantul Tourism. All Rights Reserved.</p>
         </div>
     </footer>
 @endsection

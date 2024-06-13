@@ -14,23 +14,12 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col">
-                        <div class="alert alert-primary" role="alert">
-                            <h4><i class="fa-solid fa-location-dot"></i> Total Point</h4>
+                        <div class="alert alert-primary center" role="alert">
+                            <h4><i class="fa-solid fa-location-dot"></i> Total Tourist Spots</h4>
                             <p style="font-size: 28pt">{{$total_points}}</p>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="alert alert-success" role="alert">
-                            <h4><i class="fa-solid fa-route"></i></i> Total Polyline</h4>
-                            <p style="font-size: 28pt">{{$total_polylines}}</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="alert alert-danger" role="alert">
-                            <h4><i class="fa-solid fa-draw-polygon"></i></i> Total Polygon</h4>
-                            <p style="font-size: 28pt">{{$total_polygons}}</p>
-                        </div>
-                    </div>
+
 
                     <hr>
         <p>

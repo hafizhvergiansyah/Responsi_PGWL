@@ -257,9 +257,9 @@
         var drawControl = new L.Control.Draw({
             draw: {
                 position: 'topleft',
-                polyline: true,
-                polygon: true,
-                rectangle: true,
+                polyline: false,
+                polygon: false,
+                rectangle: false,
                 circle: false,
                 marker: true,
                 circlemarker: false
@@ -322,76 +322,13 @@
             map.addLayer(point);
         });
 
-        // GeoJSON Polyline
-        var polyline = L.geoJson(null, {
-            onEachFeature: function(feature, layer) {
-                var popupContent = "Name: " + feature.properties.name + "<br>" +
-                    "Description: " + feature.properties.description + "<br>" +
-                    "Image: <img src='{{ asset('storage/images/') }}/" + feature.properties.image +
-                    "' class='img-thumbnail' alt='...'>" + "<br>" +
-                    "<div class='d-flex flex-row mt-2'>" +
-                    "<a href='{{ url('edit-polyline') }}/" + feature.properties.id +
-                    "' class='btn btn-warning me-2'><i class='fa-solid fa-pen-to-square'></i></a>" +
-                    "<form action='{{ url('delete-polyline') }}/" + feature.properties.id + "' method='POST'>" +
-                    '{{ csrf_field() }}' +
-                    '{{ method_field('DELETE') }}' +
-                    "<button type='submit' class='btn btn-danger' onclick='return confirm(\"Are you sure you want to delete this data?\")'><i class='fa-solid fa-trash-can'></i></button>" +
-                    "</form>" +
-                    "</div>";
 
-                layer.on({
-                    click: function(e) {
-                        polyline.bindPopup(popupContent);
-                    },
-                    mouseover: function(e) {
-                        polyline.bindTooltip(feature.properties.name);
-                    },
-                });
-            },
-        });
-        $.getJSON("{{ route('api.polylines') }}", function(data) {
-            polyline.addData(data);
-            map.addLayer(polyline);
-        });
-
-        // GeoJSON Polygon
-        var polygon = L.geoJson(null, {
-            onEachFeature: function(feature, layer) {
-                var popupContent = "Name: " + feature.properties.name + "<br>" +
-                    "Description: " + feature.properties.description + "<br>" +
-                    "Image: <img src='{{ asset('storage/images/') }}/" + feature.properties.image +
-                    "' class='img-thumbnail' alt='...'>" + "<br>" +
-                    "<div class='d-flex flex-row mt-2'>" +
-                    "<a href='{{ url('edit-polygon') }}/" + feature.properties.id +
-                    "' class='btn btn-warning me-2'><i class='fa-solid fa-pen-to-square'></i></a>" +
-                    "<form action='{{ url('delete-polygon') }}/" + feature.properties.id + "' method='POST'>" +
-                    '{{ csrf_field() }}' +
-                    '{{ method_field('DELETE') }}' +
-                    "<button type='submit' class='btn btn-danger' onclick='return confirm(\"Are you sure you want to delete this data?\")'><i class='fa-solid fa-trash-can'></i></button>" +
-                    "</form>" +
-                    "</div>";
-
-                layer.on({
-                    click: function(e) {
-                        polygon.bindPopup(popupContent);
-                    },
-                    mouseover: function(e) {
-                        polygon.bindTooltip(feature.properties.name);
-                    },
-                });
-            },
-        });
-        $.getJSON("{{ route('api.polygons') }}", function(data) {
-            polygon.addData(data);
-            map.addLayer(polygon);
-        });
 
         // Overlay Layers
         var overlayMaps = {
             "Administrasi": geoJsonLayer,
-            "Point": point,
-            "Polyline": polyline,
-            "Polygon": polygon
+            "Titik Wisata": point,
+
         };
 
         // Layer Control

@@ -222,10 +222,10 @@ class PointController extends Controller
     public function table()
     {
         $points = $this->point->points();
-        
+
 
         $data = [
-            'title' => 'Table Point',
+            'title' => 'Titik Wisata',
             'points' => $points
         ];
 

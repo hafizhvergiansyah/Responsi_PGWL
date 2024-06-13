@@ -39,9 +39,8 @@
                             <i class="fa-solid fa-table"></i> Table
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="{{ route('table-points') }}"></i></i></i>Table Points</a></li>
-                          <li><a class="dropdown-item" href="{{ route('table-polygons') }}"></i></i></i>Table Polygons</a></li>
-                          <li><a class="dropdown-item" href="{{ route('table-polyline') }}"></i></i>Table Polylines</a></li>
+                          <li><a class="dropdown-item" href="{{ route('table-points') }}"></i></i></i>Table Titik Wisata</a></li>
+                          
 
                         </ul>
                       </li>

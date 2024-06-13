@@ -205,9 +205,8 @@
         // Overlay layers
         var overlayMaps = {
             "Administrasi": geoJsonLayer,
-            "Point": point,
-            "Polyline": polyline,
-            "Polygon": polygon
+            "Titik Wisata": point,
+            
         };
 
         // Layer control
