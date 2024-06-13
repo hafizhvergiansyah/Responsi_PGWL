@@ -9,7 +9,7 @@ class MapController extends Controller
     public function index() //(funtion index atau sbg method)
     {
         $data = [
-            "title" => "Petaku"
+            "title" => "Bantul Bercerita"
         ];
         if (auth()->check()) {
             return view('index', $data);
@@ -28,7 +28,7 @@ class MapController extends Controller
     public function landing()
     {
         $data = [
-            "title" => "Landing"
+            "title" => "Landing Page"
         ];
         return view('landing', $data);
     }

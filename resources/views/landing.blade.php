@@ -52,43 +52,13 @@
         .section {
             padding: 60px 0;
             text-align: center;
+            color: #fff;
+            position: relative;
         }
 
         .container {
             width: 80%;
             margin: 0 auto;
-        }
-
-        .attraction {
-            margin: 20px 0;
-        }
-
-        .carousel {
-            display: flex;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .carousel img {
-            width: 100%;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-buttons {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
-        .carousel-buttons button {
-            background: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: #fff;
-            padding: 10px;
-            cursor: pointer;
         }
 
         form {
@@ -126,6 +96,108 @@
             text-align: center;
             padding: 20px 0;
         }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background: #555;
+        }
+
+        #home {
+            background: url('{{ asset('storage/images/pinesunrise.jpg') }}') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .attraction img, .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px;
+        }
+
+        .attraction h2, .gallery h2 {
+            color: #333;
+        }
+
+        .attraction p, .gallery p {
+            color: #333;
+        }
+
+        #welcome-section {
+            background: #fff;
+            color: #333;
+            padding: 60px 0;
+        }
+
+        #welcome-section .p-5 {
+            padding: 3rem !important;
+        }
+
+        #welcome-section .display-4 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #welcome-section p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        #welcome-section .btn-primary {
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        #welcome-section .btn-primary:hover {
+            background: #555;
+        }
+
+        #welcome-section .img-fluid {
+            width: 100%;
+            height: auto;
+        }
+
+        #welcome-section .rounded-circle {
+            border-radius: 50%;
+        }
     </style>
 @endsection
 
@@ -145,60 +217,67 @@
             <li><a href="#attractions">Attractions</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#welcome-section">Scenic Image</a></li>
         </ul>
     </nav>
 @endsection
 
 @section('content')
     <section id="home" class="section">
-        <div class="container">
+        <div class="overlay"></div>
+        <div class="container content">
             <h2>Explore Bantul</h2>
             <p>Bantul is a regency located in the southern part of the Yogyakarta Special Region in Indonesia. It's known for its beautiful beaches, cultural heritage, and friendly locals.</p>
+            <div class="button-container">
+                <a href="{{ route('index') }}" class="btn btn-primary">Discover More</a>
+            </div>
         </div>
     </section>
 
-    <section id="attractions" class="section">
+    <section id="attractions" class="section attraction">
         <div class="container">
             <h2>Top Attractions</h2>
-            <div class="carousel" id="attractionCarousel">
-                <img src="images/parangtritis.jpg" alt="Parangtritis Beach">
-                <img src="images/imogiri.jpg" alt="Imogiri Pine Forest">
-                <img src="images/timang.jpg" alt="Timang Beach">
-            </div>
-            <div class="carousel-buttons">
-                <button id="prevBtn">&lt;</button>
-                <button id="nextBtn">&gt;</button>
-            </div>
+            <p>Experience the most popular attractions in Bantul.</p>
+            <img src="image/hutanpinus.jpg" alt="Hutan Pinus">
+            <img src="image/jurangtembelan.jpg" alt="Jurang Tembelan">
+            <img src="image/gumukpasir.jpg" alt="Gunuk Pasir">
+            <img src="image/kebunbuahmangunan.jpg" alt="Kebun Buah Mangunan">
+            <img src="image/puncakbecici.jpg" alt="Puncak Becici">
         </div>
     </section>
 
-    <section id="gallery" class="section">
+    <section id="gallery" class="section gallery">
         <div class="container">
             <h2>Gallery</h2>
-            <div class="carousel" id="galleryCarousel">
-                <img src="images/parangtritis.jpg" alt="Parangtritis Beach">
-                <img src="images/imogiri.jpg" alt="Imogiri Pine Forest">
-                <img src="images/timang.jpg" alt="Timang Beach">
-            </div>
-            <div class="carousel-buttons">
-                <button id="prevGalleryBtn">&lt;</button>
-                <button id="nextGalleryBtn">&gt;</button>
-            </div>
+            <p>Check out our gallery of beautiful sights in Bantul.</p>
+            <img src="image/hutanpinus.jpg" alt="Hutan Pinus">
+            <img src="image/jurangtembelan.jpg" alt="Jurang Tembelan">
+            <img src="image/gumukpasir.jpg" alt="Gunuk Pasir">
+            <img src="image/kebunbuahmangunan.jpg" alt="Kebun Buah Mangunan">
+            <img src="image/puncakbecici.jpg" alt="Puncak Becici">
         </div>
     </section>
 
-    <section id="contact" class="section">
+   
+
+    <section id="welcome-section" class="section">
         <div class="container">
-            <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Vacation to Avoid Stress!!!</h2>
+                        <p>
+                            Welcome to Bantul Regency, a hidden paradise in the Yogyakarta Province of Indonesia. This regency, rich in natural beauty, makes for an unforgettable tourist destination. With a harmonious blend of cultural wealth and natural charm, Bantul captivates every visitor. Bantul is known for its stunning beaches. One must-visit is Parangtritis Beach, a mesmerizing beach with its long coastline, soft white sand, and challenging waves. Visitors can enjoy breathtaking sunsets or try the thrilling experience of surfing on tempting waves. Other tourist spots can be seen on the tourism distribution map below.
+                        </p>
+                        <a class="btn btn-primary btn-xl rounded-pill mt-5" href="{{ route('index') }}">Explore</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5">
+                        <img src="{{ asset('image/kebunbuahmangunan.jpg') }}" alt="Scenic Beauty of Bantul" class="img-fluid rounded-circle">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 @endsection
@@ -215,14 +294,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const navLinks = document.querySelectorAll('nav ul li a');
-            const attractionCarousel = document.getElementById('attractionCarousel');
-            const galleryCarousel = document.getElementById('galleryCarousel');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const prevGalleryBtn = document.getElementById('prevGalleryBtn');
-            const nextGalleryBtn = document.getElementById('nextGalleryBtn');
-            let attractionIndex = 0;
-            let galleryIndex = 0;
 
             navLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
@@ -236,38 +307,6 @@
                     });
                 });
             });
-
-            function showAttractionSlide(index) {
-                const slides = attractionCarousel.getElementsByTagName('img');
-                if (index >= slides.length) {
-                    attractionIndex = 0;
-                } else if (index < 0) {
-                    attractionIndex = slides.length - 1;
-                } else {
-                    attractionIndex = index;
-                }
-                attractionCarousel.style.transform = `translateX(-${attractionIndex * 100}%)`;
-            }
-
-            function showGallerySlide(index) {
-                const slides = galleryCarousel.getElementsByTagName('img');
-                if (index >= slides.length) {
-                    galleryIndex = 0;
-                } else if (index < 0) {
-                    galleryIndex = slides.length - 1;
-                } else {
-                    galleryIndex = index;
-                }
-                galleryCarousel.style.transform = `translateX(-${galleryIndex * 100}%)`;
-            }
-
-            prevBtn.addEventListener('click', () => showAttractionSlide(attractionIndex - 1));
-            nextBtn.addEventListener('click', () => showAttractionSlide(attractionIndex + 1));
-            prevGalleryBtn.addEventListener('click', () => showGallerySlide(galleryIndex - 1));
-            nextGalleryBtn.addEventListener('click', () => showGallerySlide(galleryIndex + 1));
-
-            showAttractionSlide(attractionIndex);
-            showGallerySlide(galleryIndex);
         });
     </script>
 @endsection
