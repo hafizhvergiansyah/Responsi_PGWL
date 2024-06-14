@@ -32,4 +32,11 @@ class MapController extends Controller
         ];
         return view('landing', $data);
     }
+    public function index_public()
+    {
+        $data = [
+            "title" => "Landing Page"
+        ];
+        return view('index-public', $data);
+    }
 }
