@@ -14,6 +14,9 @@
             margin: 0;
         }
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-locatecontrol@0.72.0/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
 @endsection
 
 @section('content')
@@ -21,9 +24,13 @@
 @endsection
 
 @section('script')
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
     <script src="https://unpkg.com/terraformer@1.0.7/terraformer.js"></script>
     <script src="https://unpkg.com/terraformer-wkt-parser@1.1.2/terraformer-wkt-parser.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script src="https://unpkg.com/leaflet-locatecontrol@0.72.0/dist/L.Control.Locate.min.js"></script>
     <script>
         // Map
         var map = L.map('map').setView([-7.8881, 110.3431], 11); // Center the map at the middle of Bantul
@@ -206,7 +213,6 @@
         var overlayMaps = {
             "Administrasi": geoJsonLayer,
             "Titik Wisata": point,
-            
         };
 
         // Layer control
@@ -214,5 +220,16 @@
 
         // Add scale control
         L.control.scale().addTo(map);
+
+       
+
+        // Tambahkan fitur routing
+        L.Routing.control({
+            waypoints: [
+                L.latLng(-7.801389, 110.364444), // Koordinat 0 km Jogja
+                L.latLng(-8.010910, 110.315865)  // Koordinat Pantai Parangtritis
+            ],
+            routeWhileDragging: true
+        }).addTo(map);
     </script>
 @endsection
