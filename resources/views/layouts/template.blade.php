@@ -33,6 +33,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{ route('landing') }}"><i class="fa-solid fa-house"></i>Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ route('index') }}"><i class="fa-solid fa-map"></i>Maps</a>
+                    </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,7 +43,7 @@
                         </a>
                         <ul class="dropdown-menu">
                           <li><a class="dropdown-item" href="{{ route('table-points') }}"></i></i></i>Table Titik Wisata</a></li>
-                          
+
 
                         </ul>
                       </li>
