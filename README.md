@@ -17,10 +17,10 @@ Back End
 
 <h2>Tangkapan layar komponen penting produk:</h2>
 <ul>
-  <li>Landing page</li><br><img src = "public/image/landing.png" width = "500"><br>
-  <img src = "public/image/landing.png" width = "500"><br>
+  <li>Landing page</li>
+  <img src = "public/image/landing1.png" width = "500"><br>
   <img src = "public/image/landing2.png" width = "500"><br>
-   <li>Peta persebaran pariwisata</li><br><img src = "/peta.png" width = "500"><br>
-   <li>Tabel</li><br><img src = "image/table.png" width = "500"><br>
+   <li>Peta persebaran pariwisata</li><br><img src = "public/image/peta.png" width = "500"><br>
+   <li>Tabel</li><br><img src = "public/image/table.png" width = "500"><br>
 
 </ul>
